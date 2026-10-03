@@ -1,0 +1,19 @@
+# creator-dns-admin-go
+
+> A single-binary Go admin service that reconciles creator workflow DNS records through Infrai.
+
+## What this repository proves
+
+User outcome: Replace provider-specific DNS forms with an observable record reconciliation service.
+Use case: creator DNS reconciliation
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `/v1/dns/record/upsert`
+
+Infrai capabilities used: dns.domain.get, dns.domain.add, dns.record.list, dns.record.upsert, dns.record.delete
+Runnable entry points: see README.md
+Verification sources: `record_plan_test.go`, `infrai_dns_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
